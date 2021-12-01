@@ -1,0 +1,39 @@
+﻿@model WebbApp.Models.SocietyViewModel
+@using Common.Enums
+    <div class="row mb-4">
+        <h2 class="offset-4 col">Add Society Details</h2>
+    </div>
+    <form method="post" asp-controller="Society" asp-action="AddSociety">
+        <div class="row">
+            <div class="offset-2 col-4 form-group">
+                <label>Enter Society Name</label>
+                <input asp-for="Society.SocietyName" type="text" class="form-control" placeholder="Name" />
+            </div>
+            <div class="offset-1 col-4 form-group">
+                <label>Plot Size</label>
+                <input asp-for="Society.Size" type="text" class="form-control" placeholder="Plot Size" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-2 col-4 form-group">
+                <label>City</label>
+                <input asp-for="Society.City" type="text" class="form-control" placeholder="City" />
+            </div>
+            <div class="offset-1 col-4 form-group">
+                <label>Address</label>
+                <input asp-for="Society.Address" type="text" class="form-control" placeholder="Address" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-2 col-4 form-group">
+                <label>Category</label>
+                <select class="form-control" asp-for="Society.Category" asp-items="Html.GetEnumSelectList<Enums.Category>()"></select>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="offset-2 col-4 form-group">
+                <button class="btn btn-success" type="submit">Save</button>
+            </div>
+        </div>
+    </form>

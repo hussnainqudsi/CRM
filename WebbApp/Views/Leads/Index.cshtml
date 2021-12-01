@@ -1,0 +1,40 @@
+﻿@model WebbApp.Models.LeadsViewModel
+<div class="row">
+    <a class="btn btn-primary" asp-controller="Leads" asp-action="AddLead">Add Lead</a>
+</div>
+<div class="row mt-2">
+    <button class="btn btn-danger">Back</button>
+</div>
+
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Client Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">SourceId</th>
+                <th scope="col">SocietyId</th>
+                <th scope="col">FollowUpDate</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ListLeads)
+            {
+                <tr>
+                    <td>@item.ClientName</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Address</td>
+                    <td>@item.SourceId</td>
+                    <td>@item.SocietyId</td>
+                    <td>@item.FollowUpDate</td>
+                    <td>
+                        <a asp-route-id="@item.LeadId" asp-controller="Leads" asp-action="" class="btn btn-info">Edit</a>
+                        <a asp-route-id="@item.LeadId" asp-controller="Leads" asp-action="" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

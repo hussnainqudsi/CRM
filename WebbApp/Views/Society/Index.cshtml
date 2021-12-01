@@ -1,0 +1,38 @@
+﻿@model WebbApp.Models.SocietyViewModel
+<div class="row">
+    <a class="btn btn-primary" asp-controller="Society" asp-action="AddSociety">Add Society</a>
+</div>
+<div class="row mt-2">
+    <button class="btn btn-danger">Back</button>
+</div>
+
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Society Name</th>
+                <th scope="col">Size</th>
+                <th scope="col">City</th>
+                <th scope="col">Address</th>
+                <th scope="col">Category</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ListSociety)
+            {
+                <tr>
+                    <td>@item.SocietyName</td>
+                    <td>@item.Size</td>
+                    <td>@item.City</td>
+                    <td>@item.Address</td>
+                    <td>@item.Category</td>
+                    <td>
+                        <a asp-route-id="@item.SocietyId" asp-controller="Society" asp-action="UpdateSociety" class="btn btn-info">Edit</a>
+                        <a asp-route-id="@item.SocietyId" asp-controller="Society" asp-action="DeleteSociety" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

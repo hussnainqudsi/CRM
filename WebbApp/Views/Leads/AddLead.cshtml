@@ -1,0 +1,63 @@
+﻿@model WebbApp.Models.LeadsViewModel
+@using Common.Enums
+@using Service.DTOs
+<div class="row mb-4">
+    <h2 class="offset-4 col">Add Lead Details</h2>
+</div>
+<form method="post" asp-controller="Leads" asp-action="AddLead">
+    <div class="row">
+        <div class="offset-2 col-4 form-group">
+            <label>Client Name</label>
+            <input asp-for="Leads.ClientName" type="text" class="form-control" placeholder="Client Name" />
+        </div>
+        <div class="offset-1 col-4 form-group">
+            <label>Phone</label>
+            <input asp-for="Leads.Phone" type="text" class="form-control" placeholder="Phone" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2 col-4 form-group">
+            <label>Address</label>
+            <input asp-for="Leads.Address" type="text" class="form-control" placeholder="Address" />
+        </div>
+        <div class="offset-1 col-4 form-group">
+            <label>Source</label>
+            <select class="form-control" asp-for="Leads.SourceId" asp-items="Html.GetEnumSelectList<Enums.Source>()">
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2 col-4 form-group">
+            <label>Society Name</label>
+            
+                <select class="form-control" asp-for="Leads.SocietyId" asp-items="@(new SelectList(Model.ListSociety,"SocietyId","SocietyName"))">
+                    @*@foreach (var item in Model.ListSociety)
+                {
+                    <option asp-for="@item.SocietyId">@item.Category @item.SocietyName @item.Size</option>
+                }*@
+                </select>
+            
+
+        </div>
+        <div class="offset-1 col-4 form-group">
+            <label>FollowUp Date</label>
+            <input asp-for="Leads.FollowUpDate" type="date" class="form-control" placeholder="Followup Date" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2 col-4 form-group">
+            <label>Status</label>
+            <select class="form-control" asp-for="Leads.StatusId" asp-items="Html.GetEnumSelectList<Enums.Status>()">
+            </select>
+        </div>
+        <div class="offset-1 col-4 form-group">
+            <label>Descriptions</label>
+            <textarea asp-for="Leads.Descrip" type="text" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-2 col-4 form-group">
+            <button class="btn btn-success" type="submit">Save</button>
+        </div>
+    </div>
+</form>
