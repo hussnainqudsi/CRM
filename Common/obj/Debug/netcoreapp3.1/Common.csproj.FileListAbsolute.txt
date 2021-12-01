@@ -1,0 +1,10 @@
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\Faheem Akram\source\repos\CRMLeads\Common\obj\Debug\netcoreapp3.1\Common.pdb
